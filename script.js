@@ -21,6 +21,27 @@ Declare an arbitrary number, n.
 Create a loop that searches for the next prime number, starting at n and incrementing from there.
 As soon as you find the prime number, log that number and exit the loop.*/
 
-let n = 0
+// let n = 6
+// for (let i = 2; i < n; i++){
+//     if (n % i === 0 ) {
+//     break;
+//     } else
+//     console.log(n);
+// }
 
+//^^ figure out why that is not working as intended. what is happening is that it is checking whether n is prime 
+// logging it multiple times, I think 
 
+for(let n = 5; n <= 10; n++){
+    let isprime = true; //a flag to see if the number is going to be a prime number
+
+    for (let i = 2; i < n; i++) {
+        if (n % i === 0)
+        isprime = false; //not a prime number 
+        break;
+    }
+    if (isprime)
+    console.log(`${n} is a prime number.`) 
+}
+
+// question 3
